@@ -4,8 +4,17 @@ import BandDetail from "./components/BandDetail/BandDetail";
 import Bands from "./components/Bands/Bands";
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./components/Login/Login";
+import { useEffect } from "react";
+import { getBands, getGenre, getAlbums } from "./actions/index";
+import { useDispatch } from "react-redux";
 
 function App() {
+  let dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBands());
+    dispatch(getGenre());
+    dispatch(getAlbums());
+  }, []);
   return (
     <div className="App">
       <Route exact path="/">
