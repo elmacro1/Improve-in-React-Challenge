@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+import { restart } from "../../actions";
 
 export default function BandDetail() {
+  let dispatch = useDispatch();
   let genre = useSelector((state) => state.genre);
   let { id } = useParams();
   let [band, setBand] = useState({});
@@ -30,10 +33,16 @@ export default function BandDetail() {
 
   useEffect(() => {
     getBandDetail();
+    dispatch(restart());
   }, []);
 
   return (
     <div>
+      <div>
+        <Link to="/home">
+          <button>Home</button>
+        </Link>
+      </div>
       <h3>{band.name}</h3>
       <div>
         <h4>Year</h4>
