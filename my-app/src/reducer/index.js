@@ -8,6 +8,8 @@ import {
   ORDER_NAME_UP,
   ORDER_YEAR_FALLING,
   ORDER_YEAR_UP,
+  LOGIN,
+  LOGOUT,
 } from "../actions/constantActions";
 
 let initialStore = {
@@ -15,6 +17,11 @@ let initialStore = {
   genre: [],
   albums: [],
   reset: [],
+  user: {
+    username: "improvein",
+    password: "improveinthebest",
+  },
+  session: false,
 };
 
 export default function rootReducer(state = initialStore, action) {
@@ -64,6 +71,16 @@ export default function rootReducer(state = initialStore, action) {
       return {
         ...state,
         bands: action.payload,
+      };
+    case LOGIN:
+      return {
+        ...state,
+        session: true,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        session: false,
       };
     default:
       return state;

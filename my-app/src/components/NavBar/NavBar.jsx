@@ -8,7 +8,7 @@ import {
   orderYearFalling,
   orderYearUp,
 } from "../../actions";
-
+import Logout from "../Logout/Logout";
 export default function NavBar() {
   let dispatch = useDispatch();
 
@@ -51,6 +51,7 @@ export default function NavBar() {
   return (
     <div>
       <button onClick={restarting}>Reset</button>
+      <Logout />
       <div>
         <select name="order" onClick={(event) => orderedName(event)}>
           <option>Ordering by Name</option>

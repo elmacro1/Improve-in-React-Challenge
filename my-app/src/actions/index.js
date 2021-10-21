@@ -8,6 +8,8 @@ import {
   ORDER_YEAR_FALLING,
   ORDER_NAME_UP,
   ORDER_NAME_FALLING,
+  LOGIN,
+  LOGOUT,
 } from "./constantActions";
 import { BANDS_URL, GENRE_URL, ALBUMS_URL } from "./constantUrl";
 import axios from "axios";
@@ -111,5 +113,17 @@ export function orderNameFalling() {
           payload: orderBands.data,
         });
       });
+  };
+}
+
+export function login() {
+  return {
+    type: LOGIN,
+  };
+}
+
+export function logout() {
+  return {
+    type: LOGOUT,
   };
 }

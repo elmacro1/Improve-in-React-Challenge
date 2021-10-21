@@ -7,3 +7,5 @@ export const ORDER_YEAR_UP = "ORDER_YEAR_UP";
 export const ORDER_YEAR_FALLING = "ORDER_YEAR_FALLING";
 export const ORDER_NAME_UP = "ORDER_NAME_UP";
 export const ORDER_NAME_FALLING = "ORDER_NAME_FALLING";
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
