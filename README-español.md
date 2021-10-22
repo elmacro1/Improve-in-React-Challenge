@@ -1,34 +1,30 @@
 # Improve-in Challenge
 
-_Este proyecto es un challenge de una empresa llamada Improve-in, dedicada a brindar soluciones en Sistemas de Información y Desarrollo de Software a Medida._
+_This project is a challenge for a company called Improve-in, dedicated to providing solutions in Information Systems and Custom Software Development._
 
-## Comenzando 🚀
+## Starting 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
+_These instructions will allow you to get a copy of the project running on your local machine for development and testing purposes. In your terminal put the following command._
 
 ```
-Da un ejemplo
+git clone *repo link*
 ```
 
-### Instalación 🔧
+### Installation 🔧
 
-_Para la instalación de las dependencias, solo tienes que colocar el siguiente comando en la terminal o consola desde /my-app_
+_To install the dependencies, you just have to place the following command in the terminal or console from / my-app_
 
 ```
 npm install
 ```
 
-_Y para levantar el proyecto, el siguiento comando en la terminal o consola desde /my-app_
+_And to raise the project, the following command in the terminal or console from / my-app_
 
 ```
 npm start
 ```
 
-## Algunas capturas del proyecto
+## Some screenshots of the project
 
 _Login_
 ![Screenshot](images/login.png)
@@ -37,14 +33,15 @@ _Home_
 _Details_
 ![Screenshot](images/details.png)
 
-## Construido con 🛠️
+## Built with 🛠️
 
+- [HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
+- [CSS3](https://developer.mozilla.org/es/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
-- [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 - [ReactJs](https://reactjs.org/docs/getting-started.html)
 - [Redux](https://es.redux.js.org/)
 - [Axios](https://axios-http.com/docs/intro)
 
-## Autor ✒️
+## Author ✒️
 
 - **Marco Galván** - [GitHub](https://github.com/elmacro1)
