@@ -19,10 +19,11 @@ function App() {
   return (
     <div className="App">
       {!session && (
-        <Route exact patch="/">
+        <Route patch="/">
           <Login />
         </Route>
       )}
+
       {session && (
         <Route path="/home">
           <NavBar />

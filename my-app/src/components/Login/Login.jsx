@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { login } from "../../actions";
+import styles from "./styles/Login.module.css";
 
 export default function Login() {
   let dispatch = useDispatch();
@@ -31,8 +32,11 @@ export default function Login() {
   }
 
   return (
-    <div>
-      <form onSubmit={(event) => handlerSubmit(event)}>
+    <div className={styles.container_principal}>
+      <form
+        onSubmit={(event) => handlerSubmit(event)}
+        className={styles.form_login}
+      >
         <input
           type="text"
           name="username"
@@ -40,6 +44,7 @@ export default function Login() {
           value={user_log.username}
           onChange={(event) => handlerInput(event)}
           required
+          className={styles.input_login}
         />
         <input
           type="password"
@@ -48,8 +53,11 @@ export default function Login() {
           value={user_log.password}
           onChange={(event) => handlerInput(event)}
           required
+          className={styles.input_login}
         />
-        <button type="submit">Login</button>
+        <button type="submit" className={styles.button_login}>
+          Login
+        </button>
       </form>
     </div>
   );
