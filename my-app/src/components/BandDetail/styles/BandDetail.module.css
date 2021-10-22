@@ -1,0 +1,24 @@
+.container_details {
+  display: flex;
+  justify-content: space-around;
+  color: #6e85b2;
+}
+
+.button_details {
+  background-color: transparent;
+  border-radius: 20px;
+  color: #6e85b2;
+  width: 100px;
+  height: 50px;
+}
+
+.button_details:hover {
+  background-color: #6e85b2;
+  color: #3e2c41;
+  cursor: pointer;
+}
+
+.button_details:active {
+  background-color: #3e2c41;
+  color: #6e85b2;
+}

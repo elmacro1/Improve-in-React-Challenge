@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { restart } from "../../actions";
+import style from "./styles/BandDetail.module.css";
 
 export default function BandDetail() {
   let dispatch = useDispatch();
@@ -47,10 +48,10 @@ export default function BandDetail() {
   }, []);
 
   return (
-    <div>
+    <div className={style.container_details}>
       <div>
         <Link to="/home">
-          <button>Home</button>
+          <button className={style.button_details}>Home</button>
         </Link>
       </div>
       <h3>{band.name}</h3>
