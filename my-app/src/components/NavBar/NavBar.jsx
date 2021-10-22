@@ -9,6 +9,8 @@ import {
   orderYearUp,
 } from "../../actions";
 import Logout from "../Logout/Logout";
+import style from "./styles/NavBar.module.css";
+
 export default function NavBar() {
   let dispatch = useDispatch();
 
@@ -49,7 +51,7 @@ export default function NavBar() {
   }
 
   return (
-    <div>
+    <div className={style.container}>
       <button onClick={restarting}>Reset</button>
       <Logout />
       <div>
