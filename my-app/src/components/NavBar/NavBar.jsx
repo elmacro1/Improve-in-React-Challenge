@@ -52,17 +52,27 @@ export default function NavBar() {
 
   return (
     <div className={style.container}>
-      <button onClick={restarting}>Reset</button>
+      <button onClick={restarting} className={style.button_nav}>
+        Reset
+      </button>
       <Logout />
       <div>
-        <select name="order" onClick={(event) => orderedName(event)}>
+        <select
+          name="order"
+          onClick={(event) => orderedName(event)}
+          className={style.select_nav}
+        >
           <option>Ordering by Name</option>
           <option value="upward">Upward</option>
           <option value="falling">Falling</option>
         </select>
       </div>
       <div>
-        <select name="order" onClick={(event) => orderedYear(event)}>
+        <select
+          name="order"
+          onClick={(event) => orderedYear(event)}
+          className={style.select_nav}
+        >
           <option>Ordering by Year</option>
           <option value="upward">Upward</option>
           <option value="falling">Falling</option>
@@ -74,8 +84,11 @@ export default function NavBar() {
           name="search"
           value={bandsFiltered.name}
           onChange={(event) => handlerInput(event)}
+          className={style.input_nav}
         />
-        <button type="submit">Search</button>
+        <button type="submit" className={style.button_nav}>
+          Search
+        </button>
       </form>
     </div>
   );

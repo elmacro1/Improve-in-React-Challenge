@@ -1,10 +1,4 @@
-.container {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.button_nav {
+.button_logout {
   background-color: transparent;
   border-radius: 20px;
   color: #6e85b2;
@@ -12,25 +6,21 @@
   width: 100px;
 }
 
-.button_nav:hover {
+.button_logout:hover {
   background-color: #6e85b2;
   color: #3e2c41;
   cursor: pointer;
 }
 
-.button_nav:active {
+.button_logout:active {
   background-color: #3e2c41;
   color: #6e85b2;
 }
 
-.input_nav {
+.input_logout {
   border-radius: 20px;
   background-color: #6e85b2;
   color: #3e2c41;
   font-weight: bold;
   margin: 10px;
-}
-
-.select_nav {
-  border-radius: 20px;
 }
