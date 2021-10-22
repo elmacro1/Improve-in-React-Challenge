@@ -9,6 +9,7 @@ import { restart } from "../../actions";
 export default function BandDetail() {
   let dispatch = useDispatch();
   let genre = useSelector((state) => state.genre);
+  let albums = useSelector((state) => state.albums);
   let { id } = useParams();
   let [band, setBand] = useState({});
 
@@ -31,6 +32,15 @@ export default function BandDetail() {
     return findGenre;
   }
 
+  function takeAlbums(band) {
+    let findAlbum = [];
+    for (let i = 0; i < albums.length; i++) {
+      if (band.id === albums[i].bandId) {
+        findAlbum.push(albums[i]);
+      }
+    }
+    return findAlbum;
+  }
   useEffect(() => {
     getBandDetail();
     dispatch(restart());
@@ -62,6 +72,17 @@ export default function BandDetail() {
       <div>
         <h4>Genres</h4>
         <p>{takeGenre(band)}</p>
+      </div>
+      <div>
+        <h4>Albums</h4>
+        {takeAlbums(band).map((album) => {
+          return (
+            <div>
+              <h5>{album.name}</h5>
+              <p>{album.year}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
