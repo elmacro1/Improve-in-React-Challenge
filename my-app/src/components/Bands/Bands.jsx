@@ -1,6 +1,6 @@
 import Band from "../Band/Band";
 import { useSelector } from "react-redux";
-
+import style from "./styles/Bands.module.css";
 export default function Bands() {
   let bands = useSelector((state) => state.bands);
   let genre = useSelector((state) => state.genre);
@@ -18,7 +18,7 @@ export default function Bands() {
   }
 
   return (
-    <div>
+    <div className={style.container}>
       {bands &&
         bands.map((band) => {
           return <Band name={band.name} genre={takeGenre(band)} id={band.id} />;
